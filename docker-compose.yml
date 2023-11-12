@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    container_name: larawan-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: larawan
+      RABBITMQ_DEFAULT_PASS: larawan
+    networks:
+      - rabbitmq_network
+    volumes:
+      - ./rabbitmq-data:/var/lib/rabbitmq/mnesia
+  postgres:
+    image: postgres:15.4
+    container_name: larawan-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+networks:
+  rabbitmq_network:
+    driver: bridge

@@ -1,31 +1,26 @@
-# Adonis fullstack application
+# Larawan Front
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+## Como Clonar o Projeto
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+Siga estas etapas para clonar o projeto em sua máquina local:
 
-## Setup
+### Pré-requisitos
 
-Use the adonis command to install the blueprint
+Certifique-se de ter o Git instalado na sua máquina. Se não tiver, você pode baixá-lo e instalá-lo [aqui](https://git-scm.com/).
 
-```bash
-adonis new yardstick
-```
+Certifique-se de ter o Docker instalado na sua máquina. Se não tiver, você pode baixá-lo e instalá-lo [aqui](https://docs.docker.com/desktop/install/windows-install/).
 
-or manually clone the repo and then run `npm install`.
+### Passos para Clonar
 
+1. Abra o terminal no seu computador.
 
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+2. Navegue até o diretório onde deseja clonar o projeto usando o comando `cd`. Por exemplo:
+   ```bash
+   cd caminho/do/seu/diretorio
+3. Clone o Projeto
+   ```bash
+   git init
+   git clone https://github.com/GuilhermeSousaDev/larawan-back.git
+   npm install
+   docker compose up -d
+   npm start
